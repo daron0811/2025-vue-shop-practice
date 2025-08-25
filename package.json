@@ -12,6 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.7",
+    "gh-pages": "^6.3.0",
     "vue": "^3.5.18"
   },
   "devDependencies": {

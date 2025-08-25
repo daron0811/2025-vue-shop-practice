@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/2025-vue-shop-practice/',
   plugins: [
     vue(),
     vueDevTools(),
