@@ -272,6 +272,32 @@ export const productDatas = [
 
 ---
 
+## 其他筆記
+ **vue src的用法**
+```js
+// components\ProductList.vue
+<img :src=product.img class="card-img-top"> <!--留意vue的src用法-->
+```
+
+ **inject、provide的用法**
+```js
+// App.vue
+import { ref, computed, provide } from 'vue';
+const alertMsg = ref("");
+const alertWarnMsg = ref("");
+provide('showAlert', alertMsg); // 定義顯示訊息通知的Key及訊息
+provide('showWarnAlert', alertWarnMsg);
+
+// components\AlertBox.vue
+import { inject, watch } from 'vue'
+
+// 定義inject的方法，可以變數或函式功能
+const msg = inject('showAlert', '') // 第二個參數是沒有帶入參數時的預設值
+const warnMsg = inject('showWarnAlert', '')
+
+```
+
+
 ## 小結
 
 - Vue 3（本專案實際使用）：`defineProps`, `defineEmits`, `ref`, `computed`, `watch`、模板指令（`v-for`、`:key`、事件、插值）、以及 **展開運算子（JS）**。
